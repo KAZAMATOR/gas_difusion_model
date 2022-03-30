@@ -27,7 +27,12 @@ void gas_cube::update(double time, sf::RenderWindow &w) {
                 }
             }
         }
+        if((*it)->getPosition().x > a*1.2 or (*it)->getPosition().y > a*1.2 or (*it)->getPosition().z > a*1.2){
+            std::cout << "molecule_position_error" << std::endl;
+        }
+    }
 
+    for(auto it = gas_in_cube.begin();it!=gas_in_cube.end();){
         if ((*it)->getPosition().x < 0.) {
             if (walls[0] == nullptr) {
                 (*it)->x_wall_collision();
@@ -36,7 +41,10 @@ void gas_cube::update(double time, sf::RenderWindow &w) {
                 pos.x += a;
                 (*it)->setLocation(pos);
                 (walls[0])->append_molecule(*it);
-                gas_in_cube.erase(it);
+                auto eraser = it;
+                it++;
+                gas_in_cube.erase(eraser);
+                continue;
             }
         }
 
@@ -48,7 +56,11 @@ void gas_cube::update(double time, sf::RenderWindow &w) {
                 pos.x -= a;
                 (*it)->setLocation(pos);
                 (walls[1])->append_molecule(*it);
-                gas_in_cube.erase(it);
+                auto eraser = it;
+                it++;
+                gas_in_cube.erase(eraser);
+                continue;
+
             }
         }
 
@@ -60,7 +72,10 @@ void gas_cube::update(double time, sf::RenderWindow &w) {
                 pos.y += a;
                 (*it)->setLocation(pos);
                 (walls[2])->append_molecule(*it);
-                gas_in_cube.erase(it);
+                auto eraser = it;
+                it++;
+                gas_in_cube.erase(eraser);
+                continue;
             }
         }
 
@@ -72,7 +87,10 @@ void gas_cube::update(double time, sf::RenderWindow &w) {
                 pos.y -= a;
                 (*it)->setLocation(pos);
                 (walls[3])->append_molecule(*it);
-                gas_in_cube.erase(it);
+                auto eraser = it;
+                it++;
+                gas_in_cube.erase(eraser);
+                continue;
             }
         }
 
@@ -84,7 +102,10 @@ void gas_cube::update(double time, sf::RenderWindow &w) {
                 pos.z += a;
                 (*it)->setLocation(pos);
                 (walls[4])->append_molecule(*it);
-                gas_in_cube.erase(it);
+                auto eraser = it;
+                it++;
+                gas_in_cube.erase(eraser);
+                continue;
             }
         }
 
@@ -96,14 +117,15 @@ void gas_cube::update(double time, sf::RenderWindow &w) {
                 pos.z -= a;
                 (*it)->setLocation(pos);
                 (walls[5])->append_molecule(*it);
-                gas_in_cube.erase(it);
+                auto eraser = it;
+                it++;
+                gas_in_cube.erase(eraser);
+                continue;
             }
         }
-
-        if((*it)->getPosition().x > a*1.2 or (*it)->getPosition().y > a*1.2 or (*it)->getPosition().z > a*1.2){
-            std::cout << "molecule_position_error" << std::endl;
-        }
+        it++;
     }
+
     for(auto & element: gas_in_cube){
         element->update(time);
         element->draw(w,i,j,k,a);

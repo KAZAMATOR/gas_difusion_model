@@ -5,7 +5,7 @@
 #include <cmath>
 #include "vector.h"
 
-vector::vector(): x(0), y(0), z(0){};
+vector::vector(): x(0.), y(0.), z(0.){};
 
 vector::vector(double x, double y, double z): x(x), y(y), z(z){}
 
@@ -22,7 +22,8 @@ vector vector::operator+(vector rhs) const{
 }
 
 vector vector::operator-(vector rhs) const{
-    return {x-rhs.x, y-rhs.y, z-rhs.z};
+    vector out = {x-rhs.x, y-rhs.y, z-rhs.z};
+    return out;
 }
 
 vector vector::operator*(double a) const{

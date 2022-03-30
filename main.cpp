@@ -10,12 +10,12 @@
 
 int main(){
     double a = 100.;
-    int x = 6;
-    int y = 6;
-    int z = 1;
+    int x = 2;
+    int y = 2;
+    int z = 2;
     sf::RenderWindow window(sf::VideoMode(a*x, a*y), "Standard");
 
-    main_cube MAIN = main_cube(x,y,z,a,25.,15);
+    main_cube MAIN = main_cube(x,y,z,a,25.,25);
 
 //    molecule m1 = molecule(1.,1.,{600.,200.,0.},{25.,-26.,0.},sf::Color::Red);
 //    molecule m2 = molecule(1.,1.,{640.,160.,0.},{-1.,1.,0.},sf::Color::Blue);
