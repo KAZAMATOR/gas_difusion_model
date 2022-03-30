@@ -3,10 +3,12 @@
 //
 
 #include "gas_cube.h"
+#include <iostream>
 
 
 gas_cube::gas_cube(std::list<molecule *>& gas_in_cube, int i, int j, int k, int x, int y, int z, float a): gas_in_cube(gas_in_cube), i(i),
-j(j), k(k), a(a), x(x), y(y), z(z){}
+j(j), k(k), a(a), x(x), y(y), z(z){
+}
 
 
 void gas_cube::append_molecule(molecule* m) {
@@ -97,13 +99,28 @@ void gas_cube::update(double time, sf::RenderWindow &w) {
                 gas_in_cube.erase(it);
             }
         }
+
+        if((*it)->getPosition().x > a*1.2 or (*it)->getPosition().y > a*1.2 or (*it)->getPosition().z > a*1.2){
+            std::cout << "molecule_position_error" << std::endl;
+        }
     }
     for(auto & element: gas_in_cube){
         element->update(time);
         element->draw(w,i,j,k,a);
     }
+    sf::Vertex square[]{
+        sf::Vertex(sf::Vector2f(i*a, j*a)),
+        sf::Vertex(sf::Vector2f((i+1)*a, j*a)),
+        sf::Vertex(sf::Vector2f((i+1)*a, (j+1)*a)),
+        sf::Vertex(sf::Vector2f(i*a, (j+1)*a))
+    };
+    w.draw(square,4,sf::LinesStrip);
 }
 
 std::vector<gas_cube*>* gas_cube::getWalls() {
     return &walls;
+}
+
+unsigned gas_cube::getSize() {
+    return gas_in_cube.size();
 }

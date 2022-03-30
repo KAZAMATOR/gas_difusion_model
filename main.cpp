@@ -9,9 +9,13 @@
 #include "main_cube.h"
 
 int main(){
-    sf::RenderWindow window(sf::VideoMode(1600, 1000), "Standard");
+    double a = 100.;
+    int x = 6;
+    int y = 6;
+    int z = 1;
+    sf::RenderWindow window(sf::VideoMode(a*x, a*y), "Standard");
 
-    main_cube MAIN = main_cube(2,2,2,100,25.,15);
+    main_cube MAIN = main_cube(x,y,z,a,25.,15);
 
 //    molecule m1 = molecule(1.,1.,{600.,200.,0.},{25.,-26.,0.},sf::Color::Red);
 //    molecule m2 = molecule(1.,1.,{640.,160.,0.},{-1.,1.,0.},sf::Color::Blue);

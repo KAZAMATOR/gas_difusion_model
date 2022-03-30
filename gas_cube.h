@@ -10,6 +10,7 @@
 #include <vector>
 #include "molecule.h"
 #include <list>
+#include <SFML/Graphics.hpp>
 
 
 class gas_cube {
@@ -28,6 +29,8 @@ public:
     std::vector<gas_cube*>* getWalls();
 
     void append_molecule(molecule* m);
+
+    unsigned getSize();
 };
 
 

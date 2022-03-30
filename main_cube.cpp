@@ -42,8 +42,8 @@ void cube_bond_creator(std::vector<std::vector<std::vector<gas_cube*>>>& main_cu
             (*(cube->getWalls()))[1] = nullptr;
         }
     }
-    if((*(cube->getWalls()))[0]!= nullptr){(*(cube->getWalls()))[0] = main_cube_3d[i-1][j][k];}
-    if((*(cube->getWalls()))[1]!= nullptr){(*(cube->getWalls()))[1] = main_cube_3d[i+1][j][k];}
+    if(i!=0){(*(cube->getWalls()))[0] = main_cube_3d[i-1][j][k];}
+    if(i!=x-1){(*(cube->getWalls()))[1] = main_cube_3d[i+1][j][k];}
 
 
     if(j == 0 or j == y-1){
@@ -54,8 +54,8 @@ void cube_bond_creator(std::vector<std::vector<std::vector<gas_cube*>>>& main_cu
             (*(cube->getWalls()))[3] = nullptr;
         }
     }
-    if((*(cube->getWalls()))[2]!= nullptr){(*(cube->getWalls()))[2] = main_cube_3d[i][j-1][k];}
-    if((*(cube->getWalls()))[3]!= nullptr){(*(cube->getWalls()))[3] = main_cube_3d[i][j+1][k];}
+    if(j!=0){(*(cube->getWalls()))[2] = main_cube_3d[i][j-1][k];}
+    if(j!=y-1){(*(cube->getWalls()))[3] = main_cube_3d[i][j+1][k];}
 
 
     if(k == 0 or k == z-1){
@@ -66,9 +66,8 @@ void cube_bond_creator(std::vector<std::vector<std::vector<gas_cube*>>>& main_cu
             (*(cube->getWalls()))[5] = nullptr;
         }
     }
-    if((*(cube->getWalls()))[4]!= nullptr){(*(cube->getWalls()))[4] = main_cube_3d[i][j][k-1];}
-    if((*(cube->getWalls()))[5
-    ]!= nullptr){(*(cube->getWalls()))[5] = main_cube_3d[i][j][k+1];}
+    if(k!=0){(*(cube->getWalls()))[4] = main_cube_3d[i][j][k-1];}
+    if(k!=z-1){(*(cube->getWalls()))[5] = main_cube_3d[i][j][k+1];}
 
 
 }
@@ -100,14 +99,14 @@ molecule_per_gas_cube(molecule_per_gas_cube), mean_speed(mean_speed){
                     double h = particle_generator(a,mean_speed, true, clock);
                     double c = particle_generator(a,mean_speed, false, clock);
 
-                    vector position = {f,g,h};
+                    vector position = {f,g,0.};
 
 
                     std::cout << position.x << "/" << position.y << "/" << position.z << std::endl;
 
                     std::cout << "molecule_created" << std::endl;
 
-                    vector v = {n,m,c};
+                    vector v = {n,m,0.};
 
                     std::cout << v.x << "/" << v.y << "/" << v.z << std::endl;
 
@@ -127,11 +126,14 @@ molecule_per_gas_cube(molecule_per_gas_cube), mean_speed(mean_speed){
 }
 
 void main_cube::update(double time, sf::RenderWindow &w) {
+    unsigned s = 0;
     for(int i = 0;i<x;i++){
         for(int j = 0;j<y;j++){
             for(int k = 0;k<z;k++){
                main_cube_3d[i][j][k]->update(time, w);
+               s+=main_cube_3d[i][j][k]->getSize();
             }
         }
     }
+    std::cout << s;
 }
