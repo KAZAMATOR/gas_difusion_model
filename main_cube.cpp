@@ -102,14 +102,14 @@ molecule_per_gas_cube(molecule_per_gas_cube), mean_speed(mean_speed){
                     double h = particle_generator(a,mean_speed, true, clock);
                     double c = particle_generator(a,mean_speed, false, clock);
 
-                    vector position = {f,g,h};
+                    vector position = {f,g,0.};
 
 
                     std::cout << position.x << "/" << position.y << "/" << position.z << std::endl;
 
                     std::cout << "molecule_created" << std::endl;
 
-                    vector v = {n, m, c};
+                    vector v = {n, m, 0.};
 
                     std::cout << v.x << "/" << v.y << "/" << v.z << std::endl;
 

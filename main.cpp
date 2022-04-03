@@ -11,18 +11,14 @@
 int main(){
 
     //set the size and number of small cubes
-    double a = 200.;
-    int x = 4;
-    int y = 4;
+    double a = 100.;
+    int x = 2;
+    int y = 2;
     int z = 1;
     sf::RenderWindow window(sf::VideoMode(a*x, a*y), "Standard");
 
     //create main_cube (x,y,z,a, mean_speed, molecules_per_gas_cube)
-    main_cube MAIN = main_cube(x,y,z,a,25.,100);
-
-//    molecule m1 = molecule(1.,1.,{600.,200.,0.},{25.,-26.,0.},sf::Color::Red);
-//    molecule m2 = molecule(1.,1.,{640.,160.,0.},{-1.,1.,0.},sf::Color::Blue);
-
+    main_cube MAIN = main_cube(x,y,z,a,25.,250);
 
     while (window.isOpen()) {
         sf::Event event;
