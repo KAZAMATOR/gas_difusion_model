@@ -9,13 +9,16 @@
 #include "main_cube.h"
 
 int main(){
+
+    //set the size and number of small cubes
     double a = 200.;
-    int x = 1;
-    int y = 2;
+    int x = 4;
+    int y = 4;
     int z = 1;
     sf::RenderWindow window(sf::VideoMode(a*x, a*y), "Standard");
 
-    main_cube MAIN = main_cube(x,y,z,a,25.,200);
+    //create main_cube (x,y,z,a, mean_speed, molecules_per_gas_cube)
+    main_cube MAIN = main_cube(x,y,z,a,25.,100);
 
 //    molecule m1 = molecule(1.,1.,{600.,200.,0.},{25.,-26.,0.},sf::Color::Red);
 //    molecule m2 = molecule(1.,1.,{640.,160.,0.},{-1.,1.,0.},sf::Color::Blue);
@@ -27,29 +30,14 @@ int main(){
             if (event.type == sf::Event::Closed)
                 window.close();
         }
-        double time = 0.001;
-        //регулируем скорость
 
+        //change the speed
+        double time = 0.001;
 
         window.clear();
 
         MAIN.update(time,window);
 
-//        if(std::abs((m1.getPosition() - m2.getPosition()).getLen2()) <  4.){
-//            m1.Collision(m2);
-//        }
-
-
-//
-//
-//        m1.update(time);
-//        m2.update(time);
-//
-//        m1.draw(window);
-//        m2.draw(window);
-//
-//        std::cout << m1.getV().getLen2() + m2.getV().getLen2() << std::endl;
-//        std::cout << m1.getV().x << "//" << m2.getV().x << std::endl;
         window.display();
     }
 }

@@ -1,6 +1,7 @@
 //
 // Created by Stepan on 29.03.2022.
 //
+// Implementation of "gas_cube" methods
 
 #include "gas_cube.h"
 #include <iostream>

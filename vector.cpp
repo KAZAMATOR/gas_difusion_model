@@ -1,6 +1,7 @@
 //
 // Created by Stepan on 25.03.2022.
 //
+// Implementation of "vector" methods and operators
 #include <iostream>
 #include <cmath>
 #include "vector.h"

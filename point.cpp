@@ -1,6 +1,7 @@
 //
 // Created by Stepan on 27.03.2022.
 //
+// Implementation of "point" methods
 
 #include "point.h"
 

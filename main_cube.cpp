@@ -1,6 +1,9 @@
 //
 // Created by Stepan on 29.03.2022.
 //
+// 1)Implementation of "main_cube" methods
+// 2)Random generation function
+// 3)small cube bond creator function
 
 #include <SFML/Graphics.hpp>
 #include "main_cube.h"
@@ -110,7 +113,10 @@ molecule_per_gas_cube(molecule_per_gas_cube), mean_speed(mean_speed){
 
                     std::cout << v.x << "/" << v.y << "/" << v.z << std::endl;
 
-                    molecules_list.push_back(new molecule(1.,1.,position,v,sf::Color::Blue));
+                    if(i<x/2)molecules_list.push_back(new molecule(1.,1.,position,v,sf::Color::Blue, true));
+                    else{
+                        molecules_list.push_back(new molecule(1.,1.,position,v,sf::Color::Red, false));
+                    }
                 }
                 main_cube_3d[i][j][k] = new gas_cube(molecules_list,i,j,k,x,y,z,a);
             }

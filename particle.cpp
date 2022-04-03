@@ -1,6 +1,7 @@
 //
 // Created by Stepan on 25.03.2022.
 //
+// Implementation of "particle" methods
 #include "particle.h"
 #include <cmath>
 #include <iostream>
@@ -34,8 +35,8 @@ void particle::setV(const vector &v) {
 }
 
 void particle::Collision(particle &p2) {
-    std::cout << v.x  << "//" << v.y << std::endl;
-    std::cout << p2.getV().x  << "/" << p2.getV().y << std::endl;
+
+    std::cout << v.module()*v.module() + p2.getV().module()*p2.getV().module() << std::endl;
 
     vector dist = p2.getPosition() - position;
     double l = std::sqrt(dist.getLen2());
@@ -45,8 +46,8 @@ void particle::Collision(particle &p2) {
     p2.setV(p2.getV() - (p2.getV() - v1)*(p2.position - position) / (p2.position - position).getLen2() * (p2.position - position));
     std::cout << "collision" << std::endl;
 
-    std::cout << v.x  << "//" << v.y << std::endl;
-    std::cout << p2.getV().x  << "/" << p2.getV().y << std::endl;
+
+    std::cout << v.module()*v.module() + p2.getV().module()*p2.getV().module() << std::endl;
 }
 
 void particle::move(double time) {

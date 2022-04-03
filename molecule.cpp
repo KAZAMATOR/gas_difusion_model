@@ -1,13 +1,14 @@
 //
 // Created by Stepan on 27.03.2022.
 //
+// Implementation of "molecule" methods
 
 #include <iostream>
 #include "molecule.h"
 
 
-molecule::molecule(double mass, double radius, vector position, vector v, sf::Color color) : particle(mass, radius, position, v),
-                                                                                             point(position, color){}
+molecule::molecule(double mass, double radius, vector position, vector v, sf::Color color, bool d_flag) : particle(mass, radius, position, v),
+                                                                                             point(position, color), diffusion_flag(d_flag){}
 
 void molecule::setLocation(vector location){
     particle::setPosition(location);
