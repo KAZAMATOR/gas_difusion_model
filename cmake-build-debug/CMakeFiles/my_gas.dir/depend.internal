@@ -76,12 +76,12 @@ CMakeFiles/my_gas.dir/gas_cube.cpp.obj
  C:/SFML/SFML-2.5.1/include/SFML/Window/Window.hpp
  C:/SFML/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  C:/SFML/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
- C:/Users/Stepan/Desktop/my_gas/gas_cube.cpp
- C:/Users/Stepan/Desktop/my_gas/gas_cube.h
- C:/Users/Stepan/Desktop/my_gas/molecule.h
- C:/Users/Stepan/Desktop/my_gas/particle.h
- C:/Users/Stepan/Desktop/my_gas/point.h
- C:/Users/Stepan/Desktop/my_gas/vector.h
+ C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/gas_cube.cpp
+ C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/gas_cube.h
+ C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/molecule.h
+ C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/particle.h
+ C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/point.h
+ C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/vector.h
 CMakeFiles/my_gas.dir/main.cpp.obj
  C:/SFML/SFML-2.5.1/include/SFML/Config.hpp
  C:/SFML/SFML-2.5.1/include/SFML/Graphics.hpp
@@ -157,13 +157,13 @@ CMakeFiles/my_gas.dir/main.cpp.obj
  C:/SFML/SFML-2.5.1/include/SFML/Window/Window.hpp
  C:/SFML/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  C:/SFML/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
- C:/Users/Stepan/Desktop/my_gas/gas_cube.h
- C:/Users/Stepan/Desktop/my_gas/main.cpp
- C:/Users/Stepan/Desktop/my_gas/main_cube.h
- C:/Users/Stepan/Desktop/my_gas/molecule.h
- C:/Users/Stepan/Desktop/my_gas/particle.h
- C:/Users/Stepan/Desktop/my_gas/point.h
- C:/Users/Stepan/Desktop/my_gas/vector.h
+ C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/gas_cube.h
+ C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/main.cpp
+ C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/main_cube.h
+ C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/molecule.h
+ C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/particle.h
+ C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/point.h
+ C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/vector.h
 CMakeFiles/my_gas.dir/main_cube.cpp.obj
  C:/SFML/SFML-2.5.1/include/SFML/Config.hpp
  C:/SFML/SFML-2.5.1/include/SFML/Graphics.hpp
@@ -239,13 +239,13 @@ CMakeFiles/my_gas.dir/main_cube.cpp.obj
  C:/SFML/SFML-2.5.1/include/SFML/Window/Window.hpp
  C:/SFML/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  C:/SFML/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
- C:/Users/Stepan/Desktop/my_gas/gas_cube.h
- C:/Users/Stepan/Desktop/my_gas/main_cube.cpp
- C:/Users/Stepan/Desktop/my_gas/main_cube.h
- C:/Users/Stepan/Desktop/my_gas/molecule.h
- C:/Users/Stepan/Desktop/my_gas/particle.h
- C:/Users/Stepan/Desktop/my_gas/point.h
- C:/Users/Stepan/Desktop/my_gas/vector.h
+ C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/gas_cube.h
+ C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/main_cube.cpp
+ C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/main_cube.h
+ C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/molecule.h
+ C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/particle.h
+ C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/point.h
+ C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/vector.h
 CMakeFiles/my_gas.dir/molecule.cpp.obj
  C:/SFML/SFML-2.5.1/include/SFML/Config.hpp
  C:/SFML/SFML-2.5.1/include/SFML/Graphics.hpp
@@ -321,15 +321,15 @@ CMakeFiles/my_gas.dir/molecule.cpp.obj
  C:/SFML/SFML-2.5.1/include/SFML/Window/Window.hpp
  C:/SFML/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  C:/SFML/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
- C:/Users/Stepan/Desktop/my_gas/molecule.cpp
- C:/Users/Stepan/Desktop/my_gas/molecule.h
- C:/Users/Stepan/Desktop/my_gas/particle.h
- C:/Users/Stepan/Desktop/my_gas/point.h
- C:/Users/Stepan/Desktop/my_gas/vector.h
+ C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/molecule.cpp
+ C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/molecule.h
+ C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/particle.h
+ C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/point.h
+ C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/vector.h
 CMakeFiles/my_gas.dir/particle.cpp.obj
- C:/Users/Stepan/Desktop/my_gas/particle.cpp
- C:/Users/Stepan/Desktop/my_gas/particle.h
- C:/Users/Stepan/Desktop/my_gas/vector.h
+ C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/particle.cpp
+ C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/particle.h
+ C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/vector.h
 CMakeFiles/my_gas.dir/point.cpp.obj
  C:/SFML/SFML-2.5.1/include/SFML/Config.hpp
  C:/SFML/SFML-2.5.1/include/SFML/Graphics.hpp
@@ -405,9 +405,9 @@ CMakeFiles/my_gas.dir/point.cpp.obj
  C:/SFML/SFML-2.5.1/include/SFML/Window/Window.hpp
  C:/SFML/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  C:/SFML/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
- C:/Users/Stepan/Desktop/my_gas/point.cpp
- C:/Users/Stepan/Desktop/my_gas/point.h
- C:/Users/Stepan/Desktop/my_gas/vector.h
+ C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/point.cpp
+ C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/point.h
+ C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/vector.h
 CMakeFiles/my_gas.dir/vector.cpp.obj
- C:/Users/Stepan/Desktop/my_gas/vector.cpp
- C:/Users/Stepan/Desktop/my_gas/vector.h
+ C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/vector.cpp
+ C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/vector.h

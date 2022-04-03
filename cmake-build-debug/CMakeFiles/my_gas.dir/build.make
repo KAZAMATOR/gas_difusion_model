@@ -52,10 +52,10 @@ RM = "C:\Program Files\JetBrains\CLion 2021.2.1\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Stepan\Desktop\my_gas
+CMAKE_SOURCE_DIR = C:\Users\Stepan\Desktop\my_gas\gas_difusion_model
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Stepan\Desktop\my_gas\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\Stepan\Desktop\my_gas\gas_difusion_model\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/my_gas.dir/depend.make
@@ -68,100 +68,100 @@ include CMakeFiles/my_gas.dir/flags.make
 CMakeFiles/my_gas.dir/main.cpp.obj: CMakeFiles/my_gas.dir/flags.make
 CMakeFiles/my_gas.dir/main.cpp.obj: CMakeFiles/my_gas.dir/includes_CXX.rsp
 CMakeFiles/my_gas.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Stepan\Desktop\my_gas\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/my_gas.dir/main.cpp.obj"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\my_gas.dir\main.cpp.obj -c C:\Users\Stepan\Desktop\my_gas\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Stepan\Desktop\my_gas\gas_difusion_model\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/my_gas.dir/main.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\my_gas.dir\main.cpp.obj -c C:\Users\Stepan\Desktop\my_gas\gas_difusion_model\main.cpp
 
 CMakeFiles/my_gas.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_gas.dir/main.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Stepan\Desktop\my_gas\main.cpp > CMakeFiles\my_gas.dir\main.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Stepan\Desktop\my_gas\gas_difusion_model\main.cpp > CMakeFiles\my_gas.dir\main.cpp.i
 
 CMakeFiles/my_gas.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_gas.dir/main.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Stepan\Desktop\my_gas\main.cpp -o CMakeFiles\my_gas.dir\main.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Stepan\Desktop\my_gas\gas_difusion_model\main.cpp -o CMakeFiles\my_gas.dir\main.cpp.s
 
 CMakeFiles/my_gas.dir/vector.cpp.obj: CMakeFiles/my_gas.dir/flags.make
 CMakeFiles/my_gas.dir/vector.cpp.obj: CMakeFiles/my_gas.dir/includes_CXX.rsp
 CMakeFiles/my_gas.dir/vector.cpp.obj: ../vector.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Stepan\Desktop\my_gas\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/my_gas.dir/vector.cpp.obj"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\my_gas.dir\vector.cpp.obj -c C:\Users\Stepan\Desktop\my_gas\vector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Stepan\Desktop\my_gas\gas_difusion_model\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/my_gas.dir/vector.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\my_gas.dir\vector.cpp.obj -c C:\Users\Stepan\Desktop\my_gas\gas_difusion_model\vector.cpp
 
 CMakeFiles/my_gas.dir/vector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_gas.dir/vector.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Stepan\Desktop\my_gas\vector.cpp > CMakeFiles\my_gas.dir\vector.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Stepan\Desktop\my_gas\gas_difusion_model\vector.cpp > CMakeFiles\my_gas.dir\vector.cpp.i
 
 CMakeFiles/my_gas.dir/vector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_gas.dir/vector.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Stepan\Desktop\my_gas\vector.cpp -o CMakeFiles\my_gas.dir\vector.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Stepan\Desktop\my_gas\gas_difusion_model\vector.cpp -o CMakeFiles\my_gas.dir\vector.cpp.s
 
 CMakeFiles/my_gas.dir/particle.cpp.obj: CMakeFiles/my_gas.dir/flags.make
 CMakeFiles/my_gas.dir/particle.cpp.obj: CMakeFiles/my_gas.dir/includes_CXX.rsp
 CMakeFiles/my_gas.dir/particle.cpp.obj: ../particle.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Stepan\Desktop\my_gas\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/my_gas.dir/particle.cpp.obj"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\my_gas.dir\particle.cpp.obj -c C:\Users\Stepan\Desktop\my_gas\particle.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Stepan\Desktop\my_gas\gas_difusion_model\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/my_gas.dir/particle.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\my_gas.dir\particle.cpp.obj -c C:\Users\Stepan\Desktop\my_gas\gas_difusion_model\particle.cpp
 
 CMakeFiles/my_gas.dir/particle.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_gas.dir/particle.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Stepan\Desktop\my_gas\particle.cpp > CMakeFiles\my_gas.dir\particle.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Stepan\Desktop\my_gas\gas_difusion_model\particle.cpp > CMakeFiles\my_gas.dir\particle.cpp.i
 
 CMakeFiles/my_gas.dir/particle.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_gas.dir/particle.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Stepan\Desktop\my_gas\particle.cpp -o CMakeFiles\my_gas.dir\particle.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Stepan\Desktop\my_gas\gas_difusion_model\particle.cpp -o CMakeFiles\my_gas.dir\particle.cpp.s
 
 CMakeFiles/my_gas.dir/molecule.cpp.obj: CMakeFiles/my_gas.dir/flags.make
 CMakeFiles/my_gas.dir/molecule.cpp.obj: CMakeFiles/my_gas.dir/includes_CXX.rsp
 CMakeFiles/my_gas.dir/molecule.cpp.obj: ../molecule.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Stepan\Desktop\my_gas\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/my_gas.dir/molecule.cpp.obj"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\my_gas.dir\molecule.cpp.obj -c C:\Users\Stepan\Desktop\my_gas\molecule.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Stepan\Desktop\my_gas\gas_difusion_model\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/my_gas.dir/molecule.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\my_gas.dir\molecule.cpp.obj -c C:\Users\Stepan\Desktop\my_gas\gas_difusion_model\molecule.cpp
 
 CMakeFiles/my_gas.dir/molecule.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_gas.dir/molecule.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Stepan\Desktop\my_gas\molecule.cpp > CMakeFiles\my_gas.dir\molecule.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Stepan\Desktop\my_gas\gas_difusion_model\molecule.cpp > CMakeFiles\my_gas.dir\molecule.cpp.i
 
 CMakeFiles/my_gas.dir/molecule.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_gas.dir/molecule.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Stepan\Desktop\my_gas\molecule.cpp -o CMakeFiles\my_gas.dir\molecule.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Stepan\Desktop\my_gas\gas_difusion_model\molecule.cpp -o CMakeFiles\my_gas.dir\molecule.cpp.s
 
 CMakeFiles/my_gas.dir/point.cpp.obj: CMakeFiles/my_gas.dir/flags.make
 CMakeFiles/my_gas.dir/point.cpp.obj: CMakeFiles/my_gas.dir/includes_CXX.rsp
 CMakeFiles/my_gas.dir/point.cpp.obj: ../point.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Stepan\Desktop\my_gas\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/my_gas.dir/point.cpp.obj"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\my_gas.dir\point.cpp.obj -c C:\Users\Stepan\Desktop\my_gas\point.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Stepan\Desktop\my_gas\gas_difusion_model\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/my_gas.dir/point.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\my_gas.dir\point.cpp.obj -c C:\Users\Stepan\Desktop\my_gas\gas_difusion_model\point.cpp
 
 CMakeFiles/my_gas.dir/point.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_gas.dir/point.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Stepan\Desktop\my_gas\point.cpp > CMakeFiles\my_gas.dir\point.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Stepan\Desktop\my_gas\gas_difusion_model\point.cpp > CMakeFiles\my_gas.dir\point.cpp.i
 
 CMakeFiles/my_gas.dir/point.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_gas.dir/point.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Stepan\Desktop\my_gas\point.cpp -o CMakeFiles\my_gas.dir\point.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Stepan\Desktop\my_gas\gas_difusion_model\point.cpp -o CMakeFiles\my_gas.dir\point.cpp.s
 
 CMakeFiles/my_gas.dir/gas_cube.cpp.obj: CMakeFiles/my_gas.dir/flags.make
 CMakeFiles/my_gas.dir/gas_cube.cpp.obj: CMakeFiles/my_gas.dir/includes_CXX.rsp
 CMakeFiles/my_gas.dir/gas_cube.cpp.obj: ../gas_cube.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Stepan\Desktop\my_gas\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/my_gas.dir/gas_cube.cpp.obj"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\my_gas.dir\gas_cube.cpp.obj -c C:\Users\Stepan\Desktop\my_gas\gas_cube.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Stepan\Desktop\my_gas\gas_difusion_model\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/my_gas.dir/gas_cube.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\my_gas.dir\gas_cube.cpp.obj -c C:\Users\Stepan\Desktop\my_gas\gas_difusion_model\gas_cube.cpp
 
 CMakeFiles/my_gas.dir/gas_cube.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_gas.dir/gas_cube.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Stepan\Desktop\my_gas\gas_cube.cpp > CMakeFiles\my_gas.dir\gas_cube.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Stepan\Desktop\my_gas\gas_difusion_model\gas_cube.cpp > CMakeFiles\my_gas.dir\gas_cube.cpp.i
 
 CMakeFiles/my_gas.dir/gas_cube.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_gas.dir/gas_cube.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Stepan\Desktop\my_gas\gas_cube.cpp -o CMakeFiles\my_gas.dir\gas_cube.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Stepan\Desktop\my_gas\gas_difusion_model\gas_cube.cpp -o CMakeFiles\my_gas.dir\gas_cube.cpp.s
 
 CMakeFiles/my_gas.dir/main_cube.cpp.obj: CMakeFiles/my_gas.dir/flags.make
 CMakeFiles/my_gas.dir/main_cube.cpp.obj: CMakeFiles/my_gas.dir/includes_CXX.rsp
 CMakeFiles/my_gas.dir/main_cube.cpp.obj: ../main_cube.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Stepan\Desktop\my_gas\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/my_gas.dir/main_cube.cpp.obj"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\my_gas.dir\main_cube.cpp.obj -c C:\Users\Stepan\Desktop\my_gas\main_cube.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Stepan\Desktop\my_gas\gas_difusion_model\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/my_gas.dir/main_cube.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\my_gas.dir\main_cube.cpp.obj -c C:\Users\Stepan\Desktop\my_gas\gas_difusion_model\main_cube.cpp
 
 CMakeFiles/my_gas.dir/main_cube.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_gas.dir/main_cube.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Stepan\Desktop\my_gas\main_cube.cpp > CMakeFiles\my_gas.dir\main_cube.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Stepan\Desktop\my_gas\gas_difusion_model\main_cube.cpp > CMakeFiles\my_gas.dir\main_cube.cpp.i
 
 CMakeFiles/my_gas.dir/main_cube.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_gas.dir/main_cube.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Stepan\Desktop\my_gas\main_cube.cpp -o CMakeFiles\my_gas.dir\main_cube.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Stepan\Desktop\my_gas\gas_difusion_model\main_cube.cpp -o CMakeFiles\my_gas.dir\main_cube.cpp.s
 
 # Object files for target my_gas
 my_gas_OBJECTS = \
@@ -192,7 +192,7 @@ my_gas.exe: C:/SFML/SFML-2.5.1/lib/libfreetype.a
 my_gas.exe: CMakeFiles/my_gas.dir/linklibs.rsp
 my_gas.exe: CMakeFiles/my_gas.dir/objects1.rsp
 my_gas.exe: CMakeFiles/my_gas.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Stepan\Desktop\my_gas\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable my_gas.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Stepan\Desktop\my_gas\gas_difusion_model\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable my_gas.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\my_gas.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -204,6 +204,6 @@ CMakeFiles/my_gas.dir/clean:
 .PHONY : CMakeFiles/my_gas.dir/clean
 
 CMakeFiles/my_gas.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\Stepan\Desktop\my_gas C:\Users\Stepan\Desktop\my_gas C:\Users\Stepan\Desktop\my_gas\cmake-build-debug C:\Users\Stepan\Desktop\my_gas\cmake-build-debug C:\Users\Stepan\Desktop\my_gas\cmake-build-debug\CMakeFiles\my_gas.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\Stepan\Desktop\my_gas\gas_difusion_model C:\Users\Stepan\Desktop\my_gas\gas_difusion_model C:\Users\Stepan\Desktop\my_gas\gas_difusion_model\cmake-build-debug C:\Users\Stepan\Desktop\my_gas\gas_difusion_model\cmake-build-debug C:\Users\Stepan\Desktop\my_gas\gas_difusion_model\cmake-build-debug\CMakeFiles\my_gas.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/my_gas.dir/depend
 

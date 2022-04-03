@@ -2,6 +2,7 @@
 // Created by Stepan on 27.03.2022.
 //
 
+#include <iostream>
 #include "molecule.h"
 
 
@@ -16,6 +17,7 @@ void molecule::setLocation(vector location){
 void molecule::update(double time) {
     move(time);
     point::setPosition(position);
+//    std::cout << v.x << "/" << v.y << std::endl;
 }
 
 void molecule::draw(sf::RenderWindow &w,int i, int j, int k,double a) {

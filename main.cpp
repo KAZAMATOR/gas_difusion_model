@@ -9,13 +9,13 @@
 #include "main_cube.h"
 
 int main(){
-    double a = 100.;
-    int x = 2;
+    double a = 200.;
+    int x = 1;
     int y = 2;
-    int z = 2;
+    int z = 1;
     sf::RenderWindow window(sf::VideoMode(a*x, a*y), "Standard");
 
-    main_cube MAIN = main_cube(x,y,z,a,25.,25);
+    main_cube MAIN = main_cube(x,y,z,a,25.,200);
 
 //    molecule m1 = molecule(1.,1.,{600.,200.,0.},{25.,-26.,0.},sf::Color::Red);
 //    molecule m2 = molecule(1.,1.,{640.,160.,0.},{-1.,1.,0.},sf::Color::Blue);
@@ -27,7 +27,7 @@ int main(){
             if (event.type == sf::Event::Closed)
                 window.close();
         }
-        double time = 0.0001;
+        double time = 0.001;
         //регулируем скорость
 
 

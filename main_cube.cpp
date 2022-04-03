@@ -99,14 +99,14 @@ molecule_per_gas_cube(molecule_per_gas_cube), mean_speed(mean_speed){
                     double h = particle_generator(a,mean_speed, true, clock);
                     double c = particle_generator(a,mean_speed, false, clock);
 
-                    vector position = {f,g,0.};
+                    vector position = {f,g,h};
 
 
                     std::cout << position.x << "/" << position.y << "/" << position.z << std::endl;
 
                     std::cout << "molecule_created" << std::endl;
 
-                    vector v = {n,m,0.};
+                    vector v = {n, m, c};
 
                     std::cout << v.x << "/" << v.y << "/" << v.z << std::endl;
 
@@ -126,14 +126,12 @@ molecule_per_gas_cube(molecule_per_gas_cube), mean_speed(mean_speed){
 }
 
 void main_cube::update(double time, sf::RenderWindow &w) {
-    unsigned s = 0;
+
     for(int i = 0;i<x;i++){
         for(int j = 0;j<y;j++){
             for(int k = 0;k<z;k++){
                main_cube_3d[i][j][k]->update(time, w);
-               s+=main_cube_3d[i][j][k]->getSize();
             }
         }
     }
-    std::cout << s;
 }

@@ -20,16 +20,14 @@ void gas_cube::update(double time, sf::RenderWindow &w) {
         for (auto it1 = gas_in_cube.begin(); it1 != gas_in_cube.end(); it1++) {
             if (it != it1) {
                 if (((*it)->getPosition() - (*it1)->getPosition()).module() < (*it)->getRadius() * 2) {
-                    if (((*it)->getPosition() - (*it1)->getPosition()).module() <
-                        ((*it)->getRadius() + (*it)->getRadius())) {
-                        (*it)->Collision(*(*it));
+                    if ((((*it)->getPosition() - (*it1)->getPosition()).module() -
+                            (((*it)->getRadius() + (*it)->getRadius()))) < 0.) {
+                        (*it)->Collision(*(*it1));
                     }
                 }
             }
         }
-        if((*it)->getPosition().x > a*1.2 or (*it)->getPosition().y > a*1.2 or (*it)->getPosition().z > a*1.2){
-            std::cout << "molecule_position_error" << std::endl;
-        }
+//      std::cout << (*it)->getPosition().x << "/" << (*it)->getPosition().y << std::endl;
     }
 
     for(auto it = gas_in_cube.begin();it!=gas_in_cube.end();){
@@ -37,6 +35,7 @@ void gas_cube::update(double time, sf::RenderWindow &w) {
             if (walls[0] == nullptr) {
                 (*it)->x_wall_collision();
             } else {
+                std::cout << "erased" << std::endl;
                 vector pos = (*it)->getPosition();
                 pos.x += a;
                 (*it)->setLocation(pos);
@@ -52,6 +51,7 @@ void gas_cube::update(double time, sf::RenderWindow &w) {
             if (walls[1] == nullptr) {
                 (*it)->x_wall_collision();
             } else {
+                std::cout << "erased" << std::endl;
                 vector pos = (*it)->getPosition();
                 pos.x -= a;
                 (*it)->setLocation(pos);
@@ -68,6 +68,7 @@ void gas_cube::update(double time, sf::RenderWindow &w) {
             if (walls[2] == nullptr) {
                 (*it)->y_wall_collision();
             } else {
+                std::cout << "erased" << std::endl;
                 vector pos = (*it)->getPosition();
                 pos.y += a;
                 (*it)->setLocation(pos);
@@ -83,6 +84,7 @@ void gas_cube::update(double time, sf::RenderWindow &w) {
             if (walls[3] == nullptr) {
                 (*it)->y_wall_collision();
             } else {
+                std::cout << "erased" << std::endl;
                 vector pos = (*it)->getPosition();
                 pos.y -= a;
                 (*it)->setLocation(pos);
@@ -98,6 +100,7 @@ void gas_cube::update(double time, sf::RenderWindow &w) {
             if (walls[4] == nullptr) {
                 (*it)->z_wall_collision();
             } else {
+                std::cout << "erased" << std::endl;
                 vector pos = (*it)->getPosition();
                 pos.z += a;
                 (*it)->setLocation(pos);
@@ -113,6 +116,7 @@ void gas_cube::update(double time, sf::RenderWindow &w) {
             if (walls[5] == nullptr) {
                 (*it)->z_wall_collision();
             } else {
+                std::cout << "erased" << std::endl;
                 vector pos = (*it)->getPosition();
                 pos.z -= a;
                 (*it)->setLocation(pos);

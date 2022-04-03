@@ -8,13 +8,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/Stepan/Desktop/my_gas/gas_cube.cpp" "C:/Users/Stepan/Desktop/my_gas/cmake-build-debug/CMakeFiles/my_gas.dir/gas_cube.cpp.obj"
-  "C:/Users/Stepan/Desktop/my_gas/main.cpp" "C:/Users/Stepan/Desktop/my_gas/cmake-build-debug/CMakeFiles/my_gas.dir/main.cpp.obj"
-  "C:/Users/Stepan/Desktop/my_gas/main_cube.cpp" "C:/Users/Stepan/Desktop/my_gas/cmake-build-debug/CMakeFiles/my_gas.dir/main_cube.cpp.obj"
-  "C:/Users/Stepan/Desktop/my_gas/molecule.cpp" "C:/Users/Stepan/Desktop/my_gas/cmake-build-debug/CMakeFiles/my_gas.dir/molecule.cpp.obj"
-  "C:/Users/Stepan/Desktop/my_gas/particle.cpp" "C:/Users/Stepan/Desktop/my_gas/cmake-build-debug/CMakeFiles/my_gas.dir/particle.cpp.obj"
-  "C:/Users/Stepan/Desktop/my_gas/point.cpp" "C:/Users/Stepan/Desktop/my_gas/cmake-build-debug/CMakeFiles/my_gas.dir/point.cpp.obj"
-  "C:/Users/Stepan/Desktop/my_gas/vector.cpp" "C:/Users/Stepan/Desktop/my_gas/cmake-build-debug/CMakeFiles/my_gas.dir/vector.cpp.obj"
+  "C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/gas_cube.cpp" "C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/cmake-build-debug/CMakeFiles/my_gas.dir/gas_cube.cpp.obj"
+  "C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/main.cpp" "C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/cmake-build-debug/CMakeFiles/my_gas.dir/main.cpp.obj"
+  "C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/main_cube.cpp" "C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/cmake-build-debug/CMakeFiles/my_gas.dir/main_cube.cpp.obj"
+  "C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/molecule.cpp" "C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/cmake-build-debug/CMakeFiles/my_gas.dir/molecule.cpp.obj"
+  "C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/particle.cpp" "C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/cmake-build-debug/CMakeFiles/my_gas.dir/particle.cpp.obj"
+  "C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/point.cpp" "C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/cmake-build-debug/CMakeFiles/my_gas.dir/point.cpp.obj"
+  "C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/vector.cpp" "C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/cmake-build-debug/CMakeFiles/my_gas.dir/vector.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
