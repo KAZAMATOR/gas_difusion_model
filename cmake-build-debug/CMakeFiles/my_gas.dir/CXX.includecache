@@ -685,6 +685,8 @@ list
 -
 SFML/Graphics.hpp
 -
+thread
+-
 
 C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/main.cpp
 SFML/Graphics.hpp
@@ -703,6 +705,8 @@ iostream
 -
 main_cube.h
 C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/main_cube.h
+fstream
+-
 
 C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/main_cube.h
 vector

@@ -10,6 +10,9 @@
 #include <list>
 #include "vector.h"
 #include <iostream>
+#include <thread>
+#include <functional>
+
 
 
 //flag: true = coord_distribution,  false = speed_distribution
@@ -17,11 +20,11 @@ double particle_generator(double a, double mean_speed,bool flag, sf::Clock clock
     auto current_time = clock.getElapsedTime().asMicroseconds();
     auto generator =  std::mt19937_64(current_time);
     auto coord_distribution = std::uniform_int_distribution(0,int(a));
-    auto speed_distribution = std::normal_distribution(mean_speed,10.);
+    auto speed_distribution = std::normal_distribution(mean_speed,mean_speed/2);
     //
     auto operator_distribution = std::uniform_int_distribution(0,1);
 
-    std::cout << current_time << std::endl;
+//    std::cout << current_time << std::endl;
 
     if(flag){
         return double(coord_distribution(generator));
@@ -131,12 +134,27 @@ molecule_per_gas_cube(molecule_per_gas_cube), mean_speed(mean_speed){
     }
 }
 
-void main_cube::update(double time, sf::RenderWindow &w) {
 
+void main_cube::update(double time, std::fstream& out, bool flag) {
+    std::vector<std::thread*> threads;
     for(int i = 0;i<x;i++){
         for(int j = 0;j<y;j++){
             for(int k = 0;k<z;k++){
-               main_cube_3d[i][j][k]->update(time, w);
+               main_cube_3d[i][j][k]->update_all(threads,time,out,flag);
+            }
+        }
+    }
+    for(auto & element: threads){
+        element->join();
+        delete element;
+    }
+}
+
+void main_cube::draw(sf::RenderWindow &w) {
+    for(int i = 0;i<x;i++){
+        for(int j = 0;j<y;j++){
+            for(int k = 0;k<z;k++){
+                main_cube_3d[i][j][k]->draw(w);
             }
         }
     }

@@ -5,6 +5,7 @@
 
 #include <iostream>
 #include "molecule.h"
+#include <fstream>
 
 
 molecule::molecule(double mass, double radius, vector position, vector v, sf::Color color, bool d_flag) : particle(mass, radius, position, v),
@@ -15,10 +16,12 @@ void molecule::setLocation(vector location){
     point::setPosition(location);
 }
 
-void molecule::update(double time) {
+void molecule::update(double time, std::fstream& out, bool flag) {
     move(time);
     point::setPosition(position);
-//    std::cout << v.x << "/" << v.y << std::endl;
+    if(flag){
+        out << getPosition().x << " " << getPosition().y << " " << getPosition().z << std::endl;
+    }
 }
 
 void molecule::draw(sf::RenderWindow &w,int i, int j, int k,double a) {
@@ -36,4 +39,6 @@ void molecule::y_wall_collision() {
 void molecule::z_wall_collision() {
     v.z = -v.z;
 }
+
+
 

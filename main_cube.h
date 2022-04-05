@@ -27,7 +27,9 @@ public:
     main_cube(int x, int y, int z, double a,double mean_speed, int molecule_per_gas_cube);
 
     //method to update all small cubes that contains in main_cube_3d
-    void update(double time, sf::RenderWindow &w);
+    void update(double time, std::fstream& out, bool flag);
+
+    void draw(sf::RenderWindow &w);
 };
 
 

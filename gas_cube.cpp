@@ -7,6 +7,8 @@
 #include <iostream>
 
 
+
+
 gas_cube::gas_cube(std::list<molecule *>& gas_in_cube, int i, int j, int k, int x, int y, int z, float a): gas_in_cube(gas_in_cube), i(i),
 j(j), k(k), a(a), x(x), y(y), z(z){
 }
@@ -16,7 +18,7 @@ void gas_cube::append_molecule(molecule* m) {
     gas_in_cube.push_back(m);
 }
 
-void gas_cube::update(double time, sf::RenderWindow &w) {
+void gas_cube::update(double time, std::fstream& out, bool flag) {
     for(auto it = gas_in_cube.begin();it!=gas_in_cube.end();it++) {
         for (auto it1 = gas_in_cube.begin(); it1 != gas_in_cube.end(); it1++) {
             if (it != it1) {
@@ -36,7 +38,6 @@ void gas_cube::update(double time, sf::RenderWindow &w) {
             if (walls[0] == nullptr) {
                 (*it)->x_wall_collision();
             } else {
-                std::cout << "erased" << std::endl;
                 vector pos = (*it)->getPosition();
                 pos.x += a;
                 (*it)->setLocation(pos);
@@ -52,7 +53,6 @@ void gas_cube::update(double time, sf::RenderWindow &w) {
             if (walls[1] == nullptr) {
                 (*it)->x_wall_collision();
             } else {
-                std::cout << "erased" << std::endl;
                 vector pos = (*it)->getPosition();
                 pos.x -= a;
                 (*it)->setLocation(pos);
@@ -69,7 +69,6 @@ void gas_cube::update(double time, sf::RenderWindow &w) {
             if (walls[2] == nullptr) {
                 (*it)->y_wall_collision();
             } else {
-                std::cout << "erased" << std::endl;
                 vector pos = (*it)->getPosition();
                 pos.y += a;
                 (*it)->setLocation(pos);
@@ -85,7 +84,6 @@ void gas_cube::update(double time, sf::RenderWindow &w) {
             if (walls[3] == nullptr) {
                 (*it)->y_wall_collision();
             } else {
-                std::cout << "erased" << std::endl;
                 vector pos = (*it)->getPosition();
                 pos.y -= a;
                 (*it)->setLocation(pos);
@@ -101,7 +99,6 @@ void gas_cube::update(double time, sf::RenderWindow &w) {
             if (walls[4] == nullptr) {
                 (*it)->z_wall_collision();
             } else {
-                std::cout << "erased" << std::endl;
                 vector pos = (*it)->getPosition();
                 pos.z += a;
                 (*it)->setLocation(pos);
@@ -117,7 +114,6 @@ void gas_cube::update(double time, sf::RenderWindow &w) {
             if (walls[5] == nullptr) {
                 (*it)->z_wall_collision();
             } else {
-                std::cout << "erased" << std::endl;
                 vector pos = (*it)->getPosition();
                 pos.z -= a;
                 (*it)->setLocation(pos);
@@ -132,14 +128,20 @@ void gas_cube::update(double time, sf::RenderWindow &w) {
     }
 
     for(auto & element: gas_in_cube){
-        element->update(time);
-        element->draw(w,i,j,k,a);
+        element->update(time, out, flag);
+    }
+}
+
+void gas_cube::draw(sf::RenderWindow &w) {
+
+    for(auto & element: gas_in_cube) {
+        element->draw(w, i, j, k, a);
     }
     sf::Vertex square[]{
-        sf::Vertex(sf::Vector2f(i*a, j*a)),
-        sf::Vertex(sf::Vector2f((i+1)*a, j*a)),
-        sf::Vertex(sf::Vector2f((i+1)*a, (j+1)*a)),
-        sf::Vertex(sf::Vector2f(i*a, (j+1)*a))
+            sf::Vertex(sf::Vector2f(i*a, j*a)),
+            sf::Vertex(sf::Vector2f((i+1)*a, j*a)),
+            sf::Vertex(sf::Vector2f((i+1)*a, (j+1)*a)),
+            sf::Vertex(sf::Vector2f(i*a, (j+1)*a))
     };
     w.draw(square,4,sf::LinesStrip);
 }
@@ -150,4 +152,8 @@ std::vector<gas_cube*>* gas_cube::getWalls() {
 
 unsigned gas_cube::getSize() {
     return gas_in_cube.size();
+}
+
+void gas_cube::update_all(std::vector<std::thread*>& threads,double time,std::fstream& out, bool flag) {
+    threads.push_back(new std::thread(&gas_cube::update,this,time,std::ref(out),flag));
 }

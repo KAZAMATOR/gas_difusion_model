@@ -36,7 +36,7 @@ void particle::setV(const vector &v) {
 
 void particle::Collision(particle &p2) {
 
-    std::cout << v.module()*v.module() + p2.getV().module()*p2.getV().module() << std::endl;
+//    std::cout << v.module()*v.module() + p2.getV().module()*p2.getV().module() << std::endl;
 
     vector dist = p2.getPosition() - position;
     double l = std::sqrt(dist.getLen2());
@@ -44,10 +44,10 @@ void particle::Collision(particle &p2) {
     vector v1 = v;
     v = v - (v - p2.getV())*(position - p2.position) / (position - p2.position).getLen2() * (position - p2.position);
     p2.setV(p2.getV() - (p2.getV() - v1)*(p2.position - position) / (p2.position - position).getLen2() * (p2.position - position));
-    std::cout << "collision" << std::endl;
-
-
-    std::cout << v.module()*v.module() + p2.getV().module()*p2.getV().module() << std::endl;
+//    std::cout << "collision" << std::endl;
+//
+//
+//    std::cout << v.module()*v.module() + p2.getV().module()*p2.getV().module() << std::endl;
 }
 
 void particle::move(double time) {

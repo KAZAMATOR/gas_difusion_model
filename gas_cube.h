@@ -14,6 +14,7 @@
 #include "molecule.h"
 #include <list>
 #include <SFML/Graphics.hpp>
+#include <thread>
 
 
 class gas_cube {
@@ -31,15 +32,18 @@ public:
 
     std::vector<gas_cube*>* getWalls();
 
+    void append_molecule(molecule* m);
+
+    unsigned getSize();
+
     //combines the functions of updating position and drawing,
     //if the molecule is outside the cube, it either hits the wall or is transferred to another cube,
     //depending on the presence of a neighboring cube on that side
     //(the function also draws the borders of the cube)
-    void update(double time, sf::RenderWindow& w);
+    void update(double time, std::fstream& out, bool flag);
+    void update_all(std::vector<std::thread*>& threads,double time, std::fstream& out, bool flag);
 
-    void append_molecule(molecule* m);
-
-    unsigned getSize();
+    void draw( sf::RenderWindow& w);
 };
 
 
