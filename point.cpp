@@ -10,6 +10,7 @@ point::point(vector location, sf::Color color) {
     p.setPosition(location.x, location.y);
     p.setSize({1,1});
     p.setFillColor(color);
+
 }
 
 void point::setPosition(vector location) {

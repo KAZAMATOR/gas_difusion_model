@@ -40,8 +40,8 @@ public:
     //if the molecule is outside the cube, it either hits the wall or is transferred to another cube,
     //depending on the presence of a neighboring cube on that side
     //(the function also draws the borders of the cube)
-    void update(double time, std::fstream& out, bool flag);
-    void update_all(std::vector<std::thread*>& threads,double time, std::fstream& out, bool flag);
+    void update(double time, std::ofstream& out, bool flag);
+    void update_all(std::vector<std::thread*>& threads,double time, std::ofstream& out, bool flag);
 
     void draw( sf::RenderWindow& w);
 };

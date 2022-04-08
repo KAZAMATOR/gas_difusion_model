@@ -5,6 +5,8 @@
 
 #include "gas_cube.h"
 #include <iostream>
+#include <fstream>
+#include <sstream>
 
 
 
@@ -18,7 +20,7 @@ void gas_cube::append_molecule(molecule* m) {
     gas_in_cube.push_back(m);
 }
 
-void gas_cube::update(double time, std::fstream& out, bool flag) {
+void gas_cube::update(double time, std::ofstream& out, bool flag) {
     for(auto it = gas_in_cube.begin();it!=gas_in_cube.end();it++) {
         for (auto it1 = gas_in_cube.begin(); it1 != gas_in_cube.end(); it1++) {
             if (it != it1) {
@@ -36,7 +38,7 @@ void gas_cube::update(double time, std::fstream& out, bool flag) {
     for(auto it = gas_in_cube.begin();it!=gas_in_cube.end();){
         if ((*it)->getPosition().x < 0.) {
             if (walls[0] == nullptr) {
-                (*it)->x_wall_collision();
+                (*it)->x_wall_collision(a);
             } else {
                 vector pos = (*it)->getPosition();
                 pos.x += a;
@@ -51,7 +53,7 @@ void gas_cube::update(double time, std::fstream& out, bool flag) {
 
         if ((*it)->getPosition().x > a) {
             if (walls[1] == nullptr) {
-                (*it)->x_wall_collision();
+                (*it)->x_wall_collision(a);
             } else {
                 vector pos = (*it)->getPosition();
                 pos.x -= a;
@@ -67,7 +69,7 @@ void gas_cube::update(double time, std::fstream& out, bool flag) {
 
         if ((*it)->getPosition().y < 0.) {
             if (walls[2] == nullptr) {
-                (*it)->y_wall_collision();
+                (*it)->y_wall_collision(a);
             } else {
                 vector pos = (*it)->getPosition();
                 pos.y += a;
@@ -82,7 +84,7 @@ void gas_cube::update(double time, std::fstream& out, bool flag) {
 
         if ((*it)->getPosition().y > a) {
             if (walls[3] == nullptr) {
-                (*it)->y_wall_collision();
+                (*it)->y_wall_collision(a);
             } else {
                 vector pos = (*it)->getPosition();
                 pos.y -= a;
@@ -97,7 +99,7 @@ void gas_cube::update(double time, std::fstream& out, bool flag) {
 
         if ((*it)->getPosition().z < 0.) {
             if (walls[4] == nullptr) {
-                (*it)->z_wall_collision();
+                (*it)->z_wall_collision(a);
             } else {
                 vector pos = (*it)->getPosition();
                 pos.z += a;
@@ -112,7 +114,7 @@ void gas_cube::update(double time, std::fstream& out, bool flag) {
 
         if ((*it)->getPosition().z > a) {
             if (walls[5] == nullptr) {
-                (*it)->z_wall_collision();
+                (*it)->z_wall_collision(a);
             } else {
                 vector pos = (*it)->getPosition();
                 pos.z -= a;
@@ -127,9 +129,11 @@ void gas_cube::update(double time, std::fstream& out, bool flag) {
         it++;
     }
 
+    std::ostringstream local_buffer;
     for(auto & element: gas_in_cube){
-        element->update(time, out, flag);
+        element->update(time, local_buffer, flag, i, j, k, a);
     }
+    out << local_buffer.str();
 }
 
 void gas_cube::draw(sf::RenderWindow &w) {
@@ -154,6 +158,6 @@ unsigned gas_cube::getSize() {
     return gas_in_cube.size();
 }
 
-void gas_cube::update_all(std::vector<std::thread*>& threads,double time,std::fstream& out, bool flag) {
+void gas_cube::update_all(std::vector<std::thread*>& threads,double time,std::ofstream& out, bool flag) {
     threads.push_back(new std::thread(&gas_cube::update,this,time,std::ref(out),flag));
 }

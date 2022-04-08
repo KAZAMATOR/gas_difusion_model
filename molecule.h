@@ -22,17 +22,17 @@ public:
     void setLocation(vector location);
 
     //method to update molecule position
-    void update(double time, std::fstream& out, bool flag);
+    void update(double time, std::ostringstream& out, bool flag, int i, int j, int k, double a);
 
     //method to update molecule image
     void draw(sf::RenderWindow &w, int i, int j, int k,double a) override;
 
     //methods to revers x,y,z components of molecule velocity
-    void x_wall_collision();
+    void x_wall_collision(double a);
 
-    void y_wall_collision();
+    void y_wall_collision(double a);
 
-    void z_wall_collision();
+    void z_wall_collision(double a);
 };
 
 #endif //MY_GAS_MOLECULE_H
