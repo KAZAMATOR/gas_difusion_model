@@ -6,7 +6,6 @@
 #ifndef MY_GAS_MOLECULE_H
 #define MY_GAS_MOLECULE_H
 
-#pragma once
 
 #include "particle.h"
 #include "point.h"
@@ -20,6 +19,8 @@ public:
     molecule(double mass, double radius, vector position, vector v, sf::Color color, bool d_flag);
 
     void setLocation(vector location);
+
+    bool isDiffusionFlag() const;
 
     //method to update molecule position
     void update(double time, std::ostringstream& out, bool flag, int i, int j, int k, double a);

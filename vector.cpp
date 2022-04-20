@@ -18,16 +18,14 @@ double vector::module() const {
     return std::sqrt(getLen2());
 }
 
-vector vector::operator+(vector rhs) const{
+vector vector::operator+(vector rhs) const {
     return {x+rhs.x, y+rhs.y, z+rhs.z};
 }
 
-vector vector::operator-(vector rhs) const{
-    vector out = {x-rhs.x, y-rhs.y, z-rhs.z};
-    return out;
+vector vector::operator-(vector rhs) const {
+    return {x - rhs.x, y - rhs.y, z - rhs.z};
 }
-
-vector vector::operator*(double a) const{
+vector vector::operator*(double a) const {
     return{x*a, y*a, z*a};
 }
 
@@ -36,7 +34,6 @@ double vector::operator*(vector rhs) const{
 }
 
 vector operator*(double a, vector v){
-    vector v2 = {v.x*a, v.y*a, v.z*a};
-    return v2;
+    return {v.x*a, v.y*a, v.z*a};
 }
 

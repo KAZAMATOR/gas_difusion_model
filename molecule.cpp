@@ -47,5 +47,9 @@ void molecule::z_wall_collision(double a) {
     v.z *= -1;
 }
 
+bool molecule::isDiffusionFlag() const {
+    return diffusion_flag;
+}
+
 
 

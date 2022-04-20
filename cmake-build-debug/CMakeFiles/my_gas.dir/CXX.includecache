@@ -687,8 +687,12 @@ SFML/Graphics.hpp
 -
 thread
 -
+vector
+-
 
 C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/main.cpp
+parser.h
+C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/parser.h
 SFML/Graphics.hpp
 -
 vector
@@ -706,6 +710,8 @@ iostream
 main_cube.h
 C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/main_cube.h
 fstream
+-
+list
 -
 
 C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/main_cube.h
@@ -725,6 +731,12 @@ particle.h
 C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/particle.h
 point.h
 C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/point.h
+
+C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/parser.h
+main_cube.h
+C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/main_cube.h
+vector
+-
 
 C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/particle.h
 vector.h

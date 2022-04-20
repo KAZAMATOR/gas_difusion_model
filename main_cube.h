@@ -6,7 +6,6 @@
 #ifndef MAIN_CPP_MAIN_CUBE_H
 #define MAIN_CPP_MAIN_CUBE_H
 
-#pragma once
 
 #include <vector>
 #include <algorithm>
@@ -26,10 +25,22 @@ private:
 public:
     main_cube(int x, int y, int z, double a,double mean_speed, int molecule_per_gas_cube);
 
-    //method to update all small cubes that contains in main_cube_3d
-    void update(double time, std::ofstream& out, bool flag);
+    [[nodiscard]] int getMoleculePerGasCube() const;
 
-    void draw(sf::RenderWindow &w);
+    [[nodiscard]] int getX() const;
+
+    [[nodiscard]] int getY() const;
+
+    [[nodiscard]] int getZ() const;
+
+    const std::vector<std::vector<std::vector<gas_cube *>>> &getMainCube3D() const;
+
+    double getA() const;
+
+    //method to update all small cubes that contains in main_cube_3d
+    void update(double time, std::ofstream& out, bool flag, double& m_wall_counter);
+
+    void draw(sf::RenderWindow &w, bool& flag);
 };
 
 

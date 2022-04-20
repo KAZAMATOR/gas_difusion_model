@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/main.cpp" "C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/cmake-build-debug/CMakeFiles/my_gas.dir/main.cpp.obj"
   "C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/main_cube.cpp" "C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/cmake-build-debug/CMakeFiles/my_gas.dir/main_cube.cpp.obj"
   "C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/molecule.cpp" "C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/cmake-build-debug/CMakeFiles/my_gas.dir/molecule.cpp.obj"
+  "C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/parser.cpp" "C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/cmake-build-debug/CMakeFiles/my_gas.dir/parser.cpp.obj"
   "C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/particle.cpp" "C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/cmake-build-debug/CMakeFiles/my_gas.dir/particle.cpp.obj"
   "C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/point.cpp" "C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/cmake-build-debug/CMakeFiles/my_gas.dir/point.cpp.obj"
   "C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/vector.cpp" "C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/cmake-build-debug/CMakeFiles/my_gas.dir/vector.cpp.obj"

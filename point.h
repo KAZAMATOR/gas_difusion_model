@@ -6,7 +6,6 @@
 #ifndef MY_GAS_POINT_H
 #define MY_GAS_POINT_H
 
-#pragma once
 
 #include <SFML/Graphics.hpp>
 #include "vector.h"

@@ -224,6 +224,30 @@ molecule.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_gas.dir\build.make CMakeFiles/my_gas.dir/molecule.cpp.s
 .PHONY : molecule.cpp.s
 
+parser.obj: parser.cpp.obj
+.PHONY : parser.obj
+
+# target to build an object file
+parser.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_gas.dir\build.make CMakeFiles/my_gas.dir/parser.cpp.obj
+.PHONY : parser.cpp.obj
+
+parser.i: parser.cpp.i
+.PHONY : parser.i
+
+# target to preprocess a source file
+parser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_gas.dir\build.make CMakeFiles/my_gas.dir/parser.cpp.i
+.PHONY : parser.cpp.i
+
+parser.s: parser.cpp.s
+.PHONY : parser.s
+
+# target to generate assembly for a file
+parser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_gas.dir\build.make CMakeFiles/my_gas.dir/parser.cpp.s
+.PHONY : parser.cpp.s
+
 particle.obj: particle.cpp.obj
 .PHONY : particle.obj
 
@@ -317,6 +341,9 @@ help:
 	@echo ... molecule.obj
 	@echo ... molecule.i
 	@echo ... molecule.s
+	@echo ... parser.obj
+	@echo ... parser.i
+	@echo ... parser.s
 	@echo ... particle.obj
 	@echo ... particle.i
 	@echo ... particle.s

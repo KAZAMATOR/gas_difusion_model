@@ -1,4 +1,4 @@
-
+#include "parser.h"
 #include <SFML/Graphics.hpp>
 #include <vector>
 #include <list>
@@ -11,12 +11,19 @@
 #include <list>
 
 
+
 int main(){
+
+    //change the speed
+    double time = 10e-4;
+    double elapse_time = 0.;
+
     std::cout << "STARTING THE PROGRAM" << std::endl;
     std::cout << "||||||||||||||||||||" << std::endl;
     std::cout << "--------------------" << std::endl;
     std::cout << "please enter parameters:" << std::endl;
     std::cout << "||||||||||||||||||||" << std::endl;
+
     double a;
     double T;
     double mean_speed;
@@ -24,6 +31,7 @@ int main(){
     int y;
     int z;
     int molecules_per_gas_cube;
+
     std::cout << "mean gas T (K): " << std::endl;
     std::cin >> T;
     mean_speed = std::sqrt(3.*8.314462618*T/0.02897);
@@ -47,10 +55,12 @@ int main(){
     //    3000000000.
     //create main_cube (x,y,z,a, mean_speed, molecules_per_gas_cube)
     main_cube MAIN = main_cube(x,y,z,a,mean_speed,molecules_per_gas_cube);
+    parser pars(MAIN,elapse_time);
 
     //counter for set file output frequency
     int counter = 0;
     while (window.isOpen()) {
+        elapse_time += time;
         counter++;
         sf::Event event;
         while (window.pollEvent(event)) {
@@ -58,19 +68,21 @@ int main(){
                 window.close();
         }
 
-        //change the speed
-        double time = 10e-4;
 
         window.clear();
 
-        if(counter/100 == 0 and out.is_open()){
-            //std::cout << "tick" << std::endl;
+        if(counter%100 == 0 and out.is_open()){
+//            std::cout << "tick" << std::endl;
             counter = 0;
-            MAIN.update(time,out, true);
+//            MAIN.update(time,out, true, pars.getMWallCounter());
+            pars.diff_coef_pars();
         }
-        else MAIN.update(time,out, false);
-        MAIN.draw(window);
+        else MAIN.update(time,out, true, pars.getMWallCounter());
+        bool f = false;
+        MAIN.draw(window, f);
         window.display();
+//        pars.pressure_pars();
+
     }
 
 }

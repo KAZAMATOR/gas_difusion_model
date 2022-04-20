@@ -6,8 +6,6 @@
 #ifndef MY_GAS_VECTOR_H
 #define MY_GAS_VECTOR_H
 
-#pragma once
-
 class vector{
 public:
     double x,y,z;

@@ -6,8 +6,6 @@
 #ifndef MY_GAS_PARTICLE_H
 #define MY_GAS_PARTICLE_H
 
-#pragma once
-
 #include "vector.h"
 
 class particle{

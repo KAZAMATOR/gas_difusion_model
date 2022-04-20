@@ -105,6 +105,12 @@
 		<Unit filename="C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/molecule.h">
 			<Option target="my_gas"/>
 		</Unit>
+		<Unit filename="C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/parser.cpp">
+			<Option target="my_gas"/>
+		</Unit>
+		<Unit filename="C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/parser.h">
+			<Option target="my_gas"/>
+		</Unit>
 		<Unit filename="C:/Users/Stepan/Desktop/my_gas/gas_difusion_model/particle.cpp">
 			<Option target="my_gas"/>
 		</Unit>

@@ -77,6 +77,29 @@ void cube_bond_creator(std::vector<std::vector<std::vector<gas_cube*>>>& main_cu
 
 }
 
+void diff_installation_bond_creator(std::vector<std::vector<std::vector<gas_cube*>>>& main_cube_3d,
+                                    int x, int y, int z){
+    for(int i = 0;i<x;i++){
+        for(int j = 0;j<y;j++){
+            for(int k = 0;k<z;k++){
+                if(i == (x/2)-2 and (j != y/2 or k != z/2)){
+                    (*(main_cube_3d[i][j][k]->getWalls()))[1] = nullptr;
+                }
+                if(i == (x/2)+1 and (j != y/2 or k != z/2)){
+                    (*(main_cube_3d[i][j][k]->getWalls()))[0] = nullptr;
+                }
+                if(i == x/2 or i == x/2-1){
+                    main_cube_3d[i][j][k]->setGasInCube0();
+                }
+            }
+        }
+    }
+    for(int s = 2;s<6;s++) {
+        (*(main_cube_3d[x / 2 - 1][y / 2][z / 2]->getWalls()))[s] = nullptr;
+        (*(main_cube_3d[x / 2 ][y / 2][z / 2]->getWalls()))[s] = nullptr;
+    }
+}
+
 main_cube::main_cube(int x, int y, int z, double a,double mean_speed, int molecule_per_gas_cube): a(a), x(x), y(y), z(z),
 molecule_per_gas_cube(molecule_per_gas_cube), mean_speed(mean_speed){
     std::cout << "LOADING..." << std::endl;
@@ -108,11 +131,11 @@ molecule_per_gas_cube(molecule_per_gas_cube), mean_speed(mean_speed){
                     double h = particle_generator(generator,a,mean_speed, true, clock);
                     double c = particle_generator(generator,a,mean_speed, false, clock);
 
-                    vector position = {f,g,0.};
+                    vector position = {f,g,h};
 
 //                    std::cout << "molecule_created" << std::endl;
 //                    std::cout << position.x << "/" << position.y << "/" << position.z << std::endl;
-                    vector v = {n,m,0.};
+                    vector v = {n,m,c};
 //                    std::cout << v.x << "/" << v.y << "/" << v.z << std::endl;
 
                     if(i<x/2)molecules_list.push_back(new molecule(1.,1.,position,v,sf::Color::Blue, true));
@@ -120,7 +143,7 @@ molecule_per_gas_cube(molecule_per_gas_cube), mean_speed(mean_speed){
                         molecules_list.push_back(new molecule(1.,1.,position,v,sf::Color::Red, false));
                     }
                 }
-                main_cube_3d[i][j][k] = new gas_cube(molecules_list,i,j,k,x,y,z,a);
+                main_cube_3d[i][j][k] = new gas_cube(molecules_list,i,j,k,x,y,z,molecule_per_gas_cube,a);
                 double divider = x*y*z;
                 if(counter > b){
                     std::cout << "|";
@@ -138,16 +161,17 @@ molecule_per_gas_cube(molecule_per_gas_cube), mean_speed(mean_speed){
             }
         }
     }
+    diff_installation_bond_creator(main_cube_3d, x, y, z);
     std::cout << "CUBE LOADED" << std::endl;
 }
 
 
-void main_cube::update(double time, std::ofstream& out, bool flag) {
+void main_cube::update(double time, std::ofstream& out, bool flag, double& m_wall_counter) {
     std::vector<std::thread*> threads;
     for(int i = 0;i<x;i++){
         for(int j = 0;j<y;j++){
             for(int k = 0;k<z;k++){
-               main_cube_3d[i][j][k]->update_all(threads,time,out,flag);
+               main_cube_3d[i][j][k]->update_all(threads,time,out,flag, m_wall_counter);
             }
         }
     }
@@ -157,15 +181,39 @@ void main_cube::update(double time, std::ofstream& out, bool flag) {
     }
 }
 
-void main_cube::draw(sf::RenderWindow &w) {
+void main_cube::draw(sf::RenderWindow &w, bool& draw_flag) {
 //    unsigned s = 0;
     for(int i = 0;i<x;i++){
         for(int j = 0;j<y;j++){
             for(int k = 0;k<z;k++){
-                main_cube_3d[i][j][k]->draw(w);
+                main_cube_3d[i][j][k]->draw(w, draw_flag);
 //                s+=main_cube_3d[i][j][k]->getSize();
             }
         }
     }
 //    std::cout << s << std::endl;
+}
+
+int main_cube::getMoleculePerGasCube() const {
+    return molecule_per_gas_cube;
+}
+
+int main_cube::getX() const {
+    return x;
+}
+
+int main_cube::getY() const {
+    return y;
+}
+
+int main_cube::getZ() const {
+    return z;
+}
+
+double main_cube::getA() const {
+    return a;
+}
+
+const std::vector<std::vector<std::vector<gas_cube *>>> &main_cube::getMainCube3D() const {
+    return main_cube_3d;
 }
