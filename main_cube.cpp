@@ -11,19 +11,24 @@
 #include "vector.h"
 #include <iostream>
 #include <thread>
-#include <functional>
+#include "gas_cube.h"
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include "parser.h"
+
+
 
 
 
 //flag: true = coord_distribution,  false = speed_distribution
 double particle_generator(std::mt19937_64& generator, double a, double mean_speed,bool flag, sf::Clock clock){
     auto coord_distribution = std::uniform_real_distribution<double>(0,a);
-//    auto coord_distribution = std::uniform_int_distribution(0,int(a));
+
     auto speed_distribution = std::normal_distribution(mean_speed,mean_speed/2);
-    //
+
     auto operator_distribution = std::uniform_int_distribution(0,1);
 
-//    std::cout << current_time << std::endl;
 
     if(flag){
         return double(coord_distribution(generator));
@@ -133,12 +138,10 @@ molecule_per_gas_cube(molecule_per_gas_cube), mean_speed(mean_speed){
 
                     vector position = {f,g,h};
 
-//                    std::cout << "molecule_created" << std::endl;
-//                    std::cout << position.x << "/" << position.y << "/" << position.z << std::endl;
                     vector v = {n,m,c};
-//                    std::cout << v.x << "/" << v.y << "/" << v.z << std::endl;
 
-                    if(i<x/2)molecules_list.push_back(new molecule(1.,1.,position,v,sf::Color::Blue, true));
+
+                    if(i<x/2)molecules_list.push_back(new molecule(3.,1.,position,v,sf::Color::Blue, true));
                     else{
                         molecules_list.push_back(new molecule(1.,1.,position,v,sf::Color::Red, false));
                     }
@@ -171,7 +174,10 @@ void main_cube::update(double time, std::ofstream& out, bool flag, double& m_wal
     for(int i = 0;i<x;i++){
         for(int j = 0;j<y;j++){
             for(int k = 0;k<z;k++){
-               main_cube_3d[i][j][k]->update_all(threads,time,out,flag, m_wall_counter);
+                std::ostringstream m;
+                out << (main_cube_3d[i][j][k]->getJoinString()).str();
+                std::stringstream().swap(const_cast<std::basic_stringstream<char> &>(main_cube_3d[i][j][k]->getJoinString()));
+                main_cube_3d[i][j][k]->update_all(threads,time,out,flag, m_wall_counter);
             }
         }
     }
@@ -182,16 +188,14 @@ void main_cube::update(double time, std::ofstream& out, bool flag, double& m_wal
 }
 
 void main_cube::draw(sf::RenderWindow &w, bool& draw_flag) {
-//    unsigned s = 0;
     for(int i = 0;i<x;i++){
         for(int j = 0;j<y;j++){
             for(int k = 0;k<z;k++){
                 main_cube_3d[i][j][k]->draw(w, draw_flag);
-//                s+=main_cube_3d[i][j][k]->getSize();
             }
         }
     }
-//    std::cout << s << std::endl;
+
 }
 
 int main_cube::getMoleculePerGasCube() const {

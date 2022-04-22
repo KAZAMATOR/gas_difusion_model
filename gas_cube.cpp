@@ -138,11 +138,9 @@ void gas_cube::update(double time, std::ofstream& out, bool flag, double& m_wall
         it++;
     }
 
-    std::ostringstream local_buffer;
     for(auto & element: gas_in_cube){
-        element->update(time, local_buffer, flag, i, j, k, a);
+        element->update(time, join_string, flag, i, j, k, a);
     }
-    out << local_buffer.str();
 }
 
 void gas_cube::draw(sf::RenderWindow &w, bool& flag) {
@@ -200,3 +198,9 @@ void gas_cube::update_all(std::vector<std::thread*>& threads,double time,std::of
 void gas_cube::setGasInCube0() {
     gas_in_cube.resize(0);
 }
+
+const std::stringstream &gas_cube::getJoinString() const {
+    return join_string;
+}
+
+

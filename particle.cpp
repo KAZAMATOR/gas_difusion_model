@@ -35,21 +35,16 @@ void particle::setV(const vector &v) {
 }
 
 void particle::Collision(particle &p2) {
-
-//    std::cout << v.module()*v.module() + p2.getV().module()*p2.getV().module() << std::endl;
-
     vector dist = p2.getPosition() - position;
     double l = std::sqrt(dist.getLen2());
     position = position - ((radius + p2.getRadius())/l - 1)*dist;
-    vector v1 = v;
-    v = v - (v - p2.getV())*(position - p2.position) / (position - p2.position).getLen2() * (position - p2.position);
-    p2.setV(p2.getV() - (p2.getV() - v1)*(p2.position - position) / (p2.position - position).getLen2() * (p2.position - position));
-//    std::cout << "collision" << std::endl;
-//
-//
-//    std::cout << v.module()*v.module() + p2.getV().module()*p2.getV().module() << std::endl;
+    vector p1 = v*mass;
+    v = (v*mass - (v*mass - p2.getV()*p2.getMass())*(position - p2.position) / (position - p2.position).getLen2() * (position - p2.position))*(1/mass);
+    p2.setV((p2.getV()*p2.getMass() - (p2.getV()*p2.getMass() - p1)*(p2.position - position) / (p2.position - position).getLen2() * (p2.position - position))*(1/p2.getMass()));
+
 }
 
 void particle::move(double time) {
     position = position + v*time;
+    v.y += 10;
 }

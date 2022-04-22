@@ -46,14 +46,12 @@ int main(){
     std::cout << std::endl;
 
     remove("C:\\Users\\Stepan\\Desktop\\my_gas\\gas_difusion_model\\data.txt");
-    std::ofstream out("C:\\Users\\Stepan\\Desktop\\my_gas\\gas_difusion_model\\data.txt",std::ios::app);
+    std::ofstream out("C:\\Users\\Stepan\\Desktop\\my_gas\\gas_difusion_model\\data.txt",std::ios::binary);
 
     //set the size and number of small cubes
 
 
     sf::RenderWindow window(sf::VideoMode(a*x, a*y), "Standard");
-    //    3000000000.
-    //create main_cube (x,y,z,a, mean_speed, molecules_per_gas_cube)
     main_cube MAIN = main_cube(x,y,z,a,mean_speed,molecules_per_gas_cube);
     parser pars(MAIN,elapse_time);
 
@@ -72,7 +70,6 @@ int main(){
         window.clear();
 
         if(counter%100 == 0 and out.is_open()){
-//            std::cout << "tick" << std::endl;
             counter = 0;
 //            MAIN.update(time,out, true, pars.getMWallCounter());
             pars.diff_coef_pars();

@@ -11,6 +11,7 @@
 #include <algorithm>
 #include <random>
 #include <chrono>
+#include <sstream>
 
 #include "gas_cube.h"
 
@@ -33,9 +34,9 @@ public:
 
     [[nodiscard]] int getZ() const;
 
-    const std::vector<std::vector<std::vector<gas_cube *>>> &getMainCube3D() const;
+    [[nodiscard]] const std::vector<std::vector<std::vector<gas_cube *>>> &getMainCube3D() const;
 
-    double getA() const;
+    [[nodiscard]] double getA() const;
 
     //method to update all small cubes that contains in main_cube_3d
     void update(double time, std::ofstream& out, bool flag, double& m_wall_counter);

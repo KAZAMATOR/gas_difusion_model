@@ -23,7 +23,7 @@ public:
     bool isDiffusionFlag() const;
 
     //method to update molecule position
-    void update(double time, std::ostringstream& out, bool flag, int i, int j, int k, double a);
+    void update(double time, std::stringstream& out, bool flag, int i, int j, int k, double a);
 
     //method to update molecule image
     void draw(sf::RenderWindow &w, int i, int j, int k,double a) override;

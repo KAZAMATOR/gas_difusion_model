@@ -15,6 +15,7 @@
 #include <SFML/Graphics.hpp>
 #include <thread>
 #include <vector>
+#include <sstream>
 
 
 class gas_cube {
@@ -23,6 +24,7 @@ private:
     int x,y,z;
     int m_per_cube;
     float a;
+    std::stringstream join_string;
     std::list<molecule*> gas_in_cube;
 
     //contain links to neighboring cubes
@@ -37,6 +39,8 @@ public:
 
     unsigned getSize();
     unsigned getRedSize();
+
+    const std::stringstream &getJoinString() const;
 
     void setGasInCube0();
 

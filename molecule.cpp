@@ -16,7 +16,7 @@ void molecule::setLocation(vector location){
     point::setPosition(location);
 }
 
-void molecule::update(double time, std::ostringstream& out, bool flag, int i, int j, int k, double a) {
+void molecule::update(double time, std::stringstream& out, bool flag, int i, int j, int k, double a) {
     move(time);
     point::setPosition(position);
     if(flag){
